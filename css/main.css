@@ -18,12 +18,31 @@ h1 {
   margin: 0;
   font-family: 'Denk One', serif;
   color: #623b0c;
+
+  grid-area: header;
 }
 
 li {
   list-style-type: none;
   background-color: #ede3db;
   padding: 1rem;
+}
+
+li:first-child {
+  padding: 1rem;
+  grid-area: li1;
+}
+
+li:nth-last-child(3){
+  grid-area: li2;
+}
+
+li:nth-last-child(2){
+  grid-area: li3;
+}
+
+li:last-child {
+  grid-area: li4;
 }
 
 h2 {
@@ -38,4 +57,23 @@ a {
   color: #fff;
   background-color: #623b0c;
   padding: .5em .75em .6em;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+body {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-areas:
+    "header header"
+    "li1 li2"
+    "li3 li4"
+}
+
+img {
+  width: 100%;
 }

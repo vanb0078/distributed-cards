@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  font-family: Georgia, serif;
   line-height: 1.5;
 }
 
@@ -16,16 +17,25 @@ body {
 h1 {
   padding: 1rem;
   margin: 0;
-  font-family: 'Denk One', serif;
+  font-family: "Denk One", sans-serif;
   color: #623b0c;
 
   grid-area: header;
 }
 
+ol {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+ol li {
+  width: 28em;
+  padding: 1rem;
+}
+
 li {
   list-style-type: none;
   background-color: #ede3db;
-  padding: 1rem;
 }
 
 li:first-child {
@@ -48,7 +58,7 @@ li:last-child {
 h2 {
   padding: 0;
   margin: 0;
-  font-family: 'Denk One', serif;
+  font-family: "Denk One", sans-serif;
   color: #623b0c;
 }
 
@@ -60,14 +70,8 @@ a {
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-body {
   display: grid;
-  grid-template-columns: auto;
+  grid-template-columns: 1fr;
   grid-template-areas:
     "header header"
     "li1 li2"
